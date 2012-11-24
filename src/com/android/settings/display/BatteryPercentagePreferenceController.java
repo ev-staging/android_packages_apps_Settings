@@ -17,9 +17,10 @@ package com.android.settings.display;
 
 import android.content.Context;
 import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v14.preference.SwitchPreference;
 
+import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
 
@@ -52,15 +53,25 @@ public class BatteryPercentagePreferenceController extends AbstractPreferenceCon
     public void updateState(Preference preference) {
         int setting = Settings.System.getInt(mContext.getContentResolver(),
                 SHOW_BATTERY_PERCENT, 0);
+        ((ListPreference) preference).setValue(Integer.toString(setting));
+        updateSummary(preference, setting);
+    }
 
-        ((SwitchPreference) preference).setChecked(setting == 1);
+    private void updateSummary(Preference preference, int value) {
+        int summary = R.string.battery_percentage_disabled;
+        if (value == 1) {
+            summary = R.string.battery_percentage_outside_summary;
+        } else if (value == 2) {
+            summary = R.string.battery_percentage_inside_summary;
+        }
+        ((ListPreference) preference).setSummary(summary);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        boolean showPercentage = (Boolean) newValue;
         Settings.System.putInt(mContext.getContentResolver(), SHOW_BATTERY_PERCENT,
-                showPercentage ? 1 : 0);
+                Integer.valueOf((String) newValue));
+        updateSummary(preference, Integer.valueOf((String) newValue));
         return true;
     }
 }

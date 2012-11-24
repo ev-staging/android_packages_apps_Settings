@@ -23,4 +23,11 @@
     <string name="proximity_wake_title">Prevent accidental wake-up</string>
     <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
 
+    <!-- Battery percent view -->
+    <string name="battery_percentage_disabled">Disabled</string>
+    <string name="battery_percentage_inside">Inside</string>
+    <string name="battery_percentage_inside_summary">Percent is shown inside the icon</string>
+    <string name="battery_percentage_outside">Outside</string>
+    <string name="battery_percentage_outside_summary">Percent is shown next to the icon</string>
+
 </resources>

@@ -66,6 +66,9 @@ public class BatteryMeterStylePreferenceController extends AbstractPreferenceCon
             case BatteryMeterDrawableBase.BATTERY_STYLE_CIRCLE:
                 summary = R.string.battery_meter_style_circle;
                 break;
+            case BatteryMeterDrawableBase.BATTERY_STYLE_DOTTED_CIRCLE:
+                summary = R.string.battery_meter_style_dotted_circle;
+                break;
             case BatteryMeterDrawableBase.BATTERY_STYLE_HIDDEN:
                 summary = R.string.battery_meter_style_hidden;
                 break;

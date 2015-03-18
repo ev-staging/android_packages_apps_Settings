@@ -33,6 +33,7 @@
     <string-array name="battery_meter_style_entries" translatable="false">
         <item>@string/battery_meter_style_portrait</item>
         <item>@string/battery_meter_style_circle</item>
+        <item>@string/battery_meter_style_dotted_circle</item>
         <item>@string/battery_meter_style_text</item>
         <item>@string/battery_meter_style_hidden</item>
     </string-array>
@@ -40,6 +41,7 @@
     <string-array name="battery_meter_style_values" translatable="false">
         <item>0</item>
         <item>2</item>
+        <item>3</item>
         <item>5</item>
         <item>4</item>
     </string-array>

@@ -45,6 +45,13 @@
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController" />
 
     <ListPreference
+        android:key="battery_meter_style"
+        android:title="@string/battery_meter_style_title"
+        android:summary="@string/battery_meter_style_description"
+        android:entries="@array/battery_meter_style_entries"
+        android:entryValues="@array/battery_meter_style_values" />
+
+    <ListPreference
         android:key="battery_percentage"
         android:title="@string/battery_percentage"
         android:summary="@string/battery_percentage_description"

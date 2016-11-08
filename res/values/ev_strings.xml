@@ -49,4 +49,7 @@
     <!-- Jump to lockscreen tuner to let user change lockscreen shortcuts -->
     <string name="open_lockscreen_tuner">Change shortcuts</string>
 
+    <!-- Notification importance -->
+    <string name="tuner_full_importance_settings">Power notification controls</string>
+
 </resources>

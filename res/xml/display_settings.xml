@@ -55,6 +55,9 @@
         settings:controller="com.android.settings.display.WallpaperPreferenceController">
     </com.android.settingslib.RestrictedPreference>
 
+    <com.evervolv.internal.parts.PartsPreference
+        android:key="style"
+        evervolv:requiresFeature="com.evervolv.style" />
 
     <SwitchPreference
         android:key="dark_ui_mode"

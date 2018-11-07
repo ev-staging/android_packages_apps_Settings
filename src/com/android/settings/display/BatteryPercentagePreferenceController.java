@@ -20,7 +20,7 @@ import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 
-import com.android.settings.R;
+import com.android.internal.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
 
@@ -41,7 +41,8 @@ public class BatteryPercentagePreferenceController extends AbstractPreferenceCon
 
     @Override
     public boolean isAvailable() {
-        return true;
+        return mContext.getResources()
+                .getBoolean(com.android.internal.R.bool.config_battery_percentage_setting_available);
     }
 
     @Override
@@ -58,11 +59,11 @@ public class BatteryPercentagePreferenceController extends AbstractPreferenceCon
     }
 
     private void updateSummary(Preference preference, int value) {
-        int summary = R.string.battery_percentage_disabled;
+        int summary = com.android.settings.R.string.battery_percentage_disabled;
         if (value == 1) {
-            summary = R.string.battery_percentage_outside_summary;
+            summary = com.android.settings.R.string.battery_percentage_outside_summary;
         } else if (value == 2) {
-            summary = R.string.battery_percentage_inside_summary;
+            summary = com.android.settings.R.string.battery_percentage_inside_summary;
         }
         ((ListPreference) preference).setSummary(summary);
     }

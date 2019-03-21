@@ -46,4 +46,7 @@
     <string name="advanced_reboot_title">Advanced reboot</string>
     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery or bootloader</string>
 
+    <!-- Jump to lockscreen tuner to let user change lockscreen shortcuts -->
+    <string name="open_lockscreen_tuner">Change shortcuts</string>
+
 </resources>
